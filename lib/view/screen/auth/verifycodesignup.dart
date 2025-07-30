@@ -22,7 +22,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
         title: Text('Verification Code',
             style: Theme.of(context)
                 .textTheme
-                .headline1!
+                .headlineSmall!
                 .copyWith(color: AppColor.grey)),
       ),
       body: GetBuilder<VerifyCodeSignUpControllerImp>(
@@ -35,7 +35,7 @@ class VerfiyCodeSignUp extends StatelessWidget {
                   const SizedBox(height: 20),
                   const CustomTextTitleAuth(text: "Check code"),
                   const SizedBox(height: 10),
-                    CustomTextBodyAuth(
+                  CustomTextBodyAuth(
                       text:
                           "Please Enter The Digit Code Sent To ${controller.email}"),
                   const SizedBox(height: 15),
@@ -56,9 +56,17 @@ class VerfiyCodeSignUp extends StatelessWidget {
                     }, // end onSubmit
                   ),
                   const SizedBox(height: 40),
-                  InkWell(onTap: (){
-                    controller.reSend() ; 
-                  },child: Center(child: Text("Resend verfiy code" , style: TextStyle(color: AppColor.primaryColor , fontSize: 20 ),)),)
+                  InkWell(
+                    onTap: () {
+                      controller.reSend();
+                    },
+                    child: Center(
+                        child: Text(
+                      "Resend verfiy code",
+                      style:
+                          TextStyle(color: AppColor.primaryColor, fontSize: 20),
+                    )),
+                  )
                 ]),
               ))),
     );

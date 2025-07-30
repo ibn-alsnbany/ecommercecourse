@@ -12,10 +12,9 @@ class ProductDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     ProductDetailsControllerImp controller =
         Get.put(ProductDetailsControllerImp());
-        
+
     return Scaffold(
         bottomNavigationBar: Container(
             margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -48,7 +47,7 @@ class ProductDetails extends StatelessWidget {
                               Text("${controller.itemsModel.itemsName}",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .headline1!
+                                      .headlineSmall!
                                       .copyWith(
                                         color: AppColor.fourthColor,
                                       )),
@@ -67,7 +66,7 @@ class ProductDetails extends StatelessWidget {
                               Text("${controller.itemsModel.itemsDesc}",
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyText1!
+                                      .bodySmall!
                                       .copyWith(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w300,
